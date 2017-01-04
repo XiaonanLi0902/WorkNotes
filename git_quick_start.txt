@@ -102,3 +102,47 @@ git config --global color.ui true
 
 git add -f App.class
 git check-ignore -v App.class 
+
+#alias
+git config --global alias.st status
+git config --global alias.ci commit
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.unstage 'reset HEAD'
+git config --global alias.last 'log -1'
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+#cat .git/config 
+
+
+#setup git server
+
+sudo apt-get install git
+sudo adduser git
+#collect all user's public keys(id_rsa.pub) to /home/git/.ssh/authorized_keys
+
+sudo git init --bare sample.git
+sudo chown -R git:git sample.git
+
+#git:x:1001:1001:,,,:/home/git:/bin/bash -> git:x:1001:1001:,,,:/home/git:/usr/bin/git-shell
+git clone git@server:/srv/sample.git
+
+#Gitosis : https://github.com/res0nat0r/gitosis # manage many R&D's public keys
+#Gitolite : https://github.com/sitaramc/gitolite # write scripts to limit branches/directory R/W permission
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
