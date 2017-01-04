@@ -63,4 +63,42 @@ git stash list
 git stash pop # git stash apply stash@{0}, git stash drop stash@{0}
 
 #git remote
+git remote
+git remote -v
+git checkout -b home_dev origin/home_dev # check out home_dev from origin/home_dev branch
+#change many code in this branch
+git branch --set-upstream home_dev origin/home_dev
+git pull  # get latest version from origin/home_dev
+#fix update confict
+git commit -m "fix conflict"
+git push origin home_dev
 
+
+
+
+# git tag
+git tag v1.0
+git tag
+git tag v0.9 $commit_id # git tag -a v0.9 -m "version 0.9 released" $commit_id
+git show v0.9
+
+git tag -s <tagname> -m "blabla..." <commit_id>
+
+git tag -d v0.9
+
+git push origin v1.0	# push one tag
+git push orign --tags	# push all tags
+
+
+git tag -d v0.9	# delete a local tag
+git push origin :refs/tags/v0.9 # delete a remote tag
+
+
+# fork git repository and then you can have R/W permissions, set pull request
+
+git config --global color.ui true
+
+#.gitignore # https://github.com/github/gitignore
+
+git add -f App.class
+git check-ignore -v App.class 
