@@ -48,7 +48,7 @@ git merge home_dev #merge home_dev to master
 git branch -d home_dev # delete branch
 
 
-
+#git stash is very useful
 
 
 
