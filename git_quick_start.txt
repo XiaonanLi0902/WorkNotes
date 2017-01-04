@@ -5,11 +5,18 @@ git commint -m "notes"
 
 git log --pretty=oneline
 git status
+git diff $file
 
-HEAD -- current version
-HEAD^	--previous version
-HEAD^^	-- pre-previous version
-HEAD~100  --pre-100 version
+HEAD     # current version
+HEAD^	 # previous version
+HEAD^^	 # pre-previous version
+HEAD~100 # pre-100 version
 
-git reset --hard HEAD^	--revert back to previous version
-git reset --hard $version_id	--only few numbers is enough
+git reset --hard HEAD^	      # revert back to previous version
+git reset --hard $version_id  # only few numbers is enough
+
+git reflog	# list git version operation records
+
+git diff HEAD -- $file
+
+git checkout -- file	# revert change
