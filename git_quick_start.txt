@@ -26,4 +26,29 @@ rm $file
 git status
 git rm $file
 
-git remote add origin git@github.com:XiaonanLi0902/WorkNotes.git
+
+ssh-keygen.exe -t rsa -C "git@github.com"
+cat ~/.ssh/id_rsa.pub
+
+cd ~/xiaonan_git/WorkNots
+git remote add origin git@github.com:XiaonanLi0902/WorkNotes.git #origin: git
+remote name
+git push -u origin master # first time push to github
+git push orgin master
+
+
+git clone https://github.com/XiaonanLi0902/WorkNotes.git
+
+
+#git branch operations
+git checkout -b home_dev # git branch home_dev; git checkout home_dev
+git branch
+
+
+
+
+
+
+
+
+
