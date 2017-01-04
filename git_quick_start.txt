@@ -1,0 +1,15 @@
+git init
+
+git add $file_list
+git commint -m "notes"
+
+git log --pretty=oneline
+git status
+
+HEAD -- current version
+HEAD^	--previous version
+HEAD^^	-- pre-previous version
+HEAD~100  --pre-100 version
+
+git reset --hard HEAD^	--revert back to previous version
+git reset --hard $version_id	--only few numbers is enough
