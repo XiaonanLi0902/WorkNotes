@@ -44,6 +44,8 @@ git clone https://github.com/XiaonanLi0902/WorkNotes.git
 git checkout -b home_dev # git branch home_dev; git checkout home_dev
 git branch
 
+git merge home_dev #merge home_dev to master
+git branch -d home_dev # delete branch
 
 
 
