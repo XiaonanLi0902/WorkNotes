@@ -1,3 +1,6 @@
+http://www.liaoxuefeng.com/
+http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000
+
 git init
 
 git add $file_list
@@ -46,11 +49,18 @@ git branch
 
 git merge home_dev #merge home_dev to master
 git branch -d home_dev # delete branch
+git branch -D home_dev # delete brach home_dev by force, even it not fully merged.
+
+git log --graph --pretty=oneline --abbrev-commit
+
+git merge --no-ff -m "merge with no-ff" home_dev # forbit fast forward and generate a new commit during merge
 
 
 #git stash is very useful
+# when you are assgined a bug, and you need to fix it assp, but your work is only half done.
+git stash # save your current work
+git stash list
+git stash pop # git stash apply stash@{0}, git stash drop stash@{0}
 
-
-
-
+#git remote
 
