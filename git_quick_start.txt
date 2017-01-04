@@ -19,4 +19,11 @@ git reflog	# list git version operation records
 
 git diff HEAD -- $file
 
-git checkout -- file	# revert change
+git reset HEAD $file	# fetch "git add $file" back to workspace
+git checkout -- $file	# revert change
+
+rm $file
+git status
+git rm $file
+
+git remote add origin git@github.com:XiaonanLi0902/WorkNotes.git
